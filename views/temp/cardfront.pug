@@ -1,0 +1,30 @@
+doctype html
+html(lang='en')
+    head
+        title Flash Cards
+        link(rel='stylesheet', href='stylesheets/style.css')
+    body
+        header
+            img(src='img/logo.png')
+            p An app to help you study
+        section.namecard
+            .namecard-hello
+                p.namecard-greeting Welcome, John!
+                form.namecard-exit(action='/goodbye', method='POST')
+                    button(type='submit')
+                        img(src='img/close.svg')
+        section.flashcards
+            .card.card-question
+                .card-header
+                h1.card-title Question
+                #content
+                    h2 Which HTML element can contain JavaScript?
+                    p#hint
+                        i Hint: It starts with an "s"
+                .card-flip-wrap
+                    a(href='card-back.html')
+                        img.card-flip(src='img/flip.svg')
+                .card-next
+                    a(href='error.html')
+                        img(src='img/next.svg')
+            script(src='app.js')
